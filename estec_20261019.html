@@ -126,6 +126,13 @@ details{break-inside:avoid; box-shadow:none;}
 details:not([open]){/* 印刷時は中身も見せたい場合、下行のコメントを外す */}
 /* details{background:#fff!important;} details .body{display:block!important;} */
 }
+/* スマホ幅：タグを見出しの下に回して、見出しが狭く押し込まれないようにする */
+@media (max-width:640px){
+  summary{flex-wrap:wrap; row-gap:8px;}
+  summary .ttl{flex:1 1 calc(100% - 40px);}
+  summary .toggle{order:2; margin-left:auto;}
+  summary .tag{order:3; margin-left:0; flex:0 0 auto;}
+}
 </style>
 </head>
 <body>
